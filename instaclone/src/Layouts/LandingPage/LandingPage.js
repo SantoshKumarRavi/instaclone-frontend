@@ -5,7 +5,7 @@ const LandingPage = () => {
     <div className='landpage-container'>
         <div className='left-container'>
             <div className='land-image-container'>
-                 <img src={require("../assets/images/landingpage.png")} alt="brand-img"></img>
+                 <img src={require("../../assets/images/landingpage.png")} alt="brand-img"></img>
             </div>
         </div>
         <div className='right-container'>

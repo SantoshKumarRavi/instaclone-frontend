@@ -17,12 +17,12 @@ const Card = ({personDetails:{name,location,likes,PostImage,description}}) => {
         </div>
     </div>
     <div className='image-container'>
-       <img src={require(`../Layouts/assets/images/${PostImage}`)} alt="images"></img>
+       <img  alt="images"></img>
     </div>
     <div className='emoji-logo-container'>
         <div className='heart-comment-container'>
             <div className='bottom-logo heart'>♡</div>
-            <div className='bottom-logo'><img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/000000/external-rocket-project-planing-flatart-icons-outline-flatarticons-1.png"/></div>
+            <div className='bottom-logo'><img alt="logo" src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/000000/external-rocket-project-planing-flatart-icons-outline-flatarticons-1.png"/></div>
         </div>
         <div className='date'>{new Date().getDate()} /{new Date().getMonth()} /{new Date().getFullYear()}</div>
     </div>
