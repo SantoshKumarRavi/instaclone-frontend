@@ -1,0 +1,24 @@
+{"users":[
+    {"name":"Siva",
+    "location":"Bengaluru",
+    "likes":64,
+    "description": "Kick start your career",
+    "PostImage": "image1.jpeg",
+    "date":"date"
+    },
+    {"name":"Neeraj",
+    "location":"Pune",
+    "likes":30,
+    "description": "Sample Description",
+    "PostImage": "image2.jpeg",
+    "date":"date"
+    },
+    {"name":"Rahul",
+    "location":"Hyderabad",
+    "likes":30,
+    "description": "Sample Description for Post",
+    "PostImage": "image3.jpg",
+    "date": "date"
+    }
+    ]
+}

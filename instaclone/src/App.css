@@ -1,0 +1,254 @@
+.App {
+  text-align: center;
+}
+.landpage-container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.left-container{
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.land-image-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.left-container>.image-container>img{
+  width: 100%;
+  height: 100%;
+}
+.right-container{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.brand-name{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: xx-large;
+  font-weight: bolder;
+  color: green;
+  line-height: 80px;
+  letter-spacing:0.2px;
+}
+
+.btn-container{
+  border: 2px solid green;
+  width: 80px;
+  padding: 10px;
+  font-size:large;
+  color: green;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.link-container{
+  text-decoration: none;
+}
+
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+} */
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+/* 
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} */
+/* 
+.App-link {
+  color: #61dafb;
+} */
+/* 
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+
+
+
+.nav-bar,.Card-top-bar,.emoji-logo-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-bar{
+  border-top:1px solid rgb(124, 104, 104);
+  border-bottom:1px solid rgb(124, 104, 104);
+}
+.Card-top-bar{
+  height:15%;
+}
+.nav-left,.likes{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: row;
+  height: 70px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.emoji-logo-container,.likes{
+  height: 8%;
+}
+.likes{
+  height:5%;
+  padding: 0%;
+  padding-left: 10px;
+}
+.nav-right{
+  display: flex;
+  align-items: center;
+  height: 70px;
+  padding: 30px;
+  box-sizing: border-box;
+
+}
+.logo,.nav-right{
+  font-size: xx-large;
+}  
+.description{
+  height: 20%;
+}
+
+.Card-container,.top-left{
+  display: flex;
+  flex-direction: column;
+}
+.top-left{
+  font-size: medium;
+  height: 100%;
+  margin-left: 15px;
+}
+.text{
+  padding: 0%;
+  margin: 0%;
+}
+.Card-container{
+  width: 330px;
+  height: 400px;
+  margin:50px auto;
+  border: 1px solid rgb(124, 104, 104);
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.series-dot-button-container,.heart-comment-container{
+  display: flex;
+  flex-direction: row;
+}
+.heart-comment-container{
+  height: 100%;
+}
+.bottom-logo,.date{
+  width: 50px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.date{
+  width: 100px;
+  font-size: small;
+}
+.heart{
+  font-size: xx-large;
+}
+.bottom-logo img{
+  height: 80%;
+  width: 40px;
+  transform: rotate(40deg);
+
+}
+
+.series-dot-button-container{
+  height: 100%;
+  align-items: center;
+}
+
+.series-btn-child{
+  width: 6px;
+  height: 6px;
+  border-radius:50%;
+  margin-right: 4px;
+  background-color: black;
+}
+
+.image-container{
+  width: 100%;
+  height: 60%;
+  box-sizing: border-box;
+}
+
+.image-container img{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
