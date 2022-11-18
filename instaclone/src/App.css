@@ -13,6 +13,13 @@
   height: 100%;
   box-sizing: border-box;
 }
+.wrap-container{
+  width: 70%;
+  height: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
 .land-image-container{
   width: 100%;
   height: 100%;
@@ -32,24 +39,29 @@
   justify-content: center;
   box-sizing: border-box;
 }
-
+.helvetica-font{
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
 .brand-name{
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: xx-large;
   font-weight: bolder;
-  color: green;
+  color: #006238;
   line-height: 80px;
   letter-spacing:0.2px;
+	font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif; 
 }
 
 .btn-container{
-  border: 2px solid green;
+  border: 2px solid #006238;
   width: 80px;
   padding: 10px;
-  font-size:large;
-  color: green;
+  font-size:20px;
+  color: #006238;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
   border-radius: 10px;
   cursor: pointer;
+  background-color: #FFFFFF;
 }
 .link-container{
   text-decoration: none;
@@ -99,22 +111,51 @@
   flex-direction: row;
   justify-content: space-between;
 }
-
+.wraping-nav{
+  width: 80%;
+  margin: auto;
+  height: 100%;
+}
 .nav-bar{
-  border-top:1px solid rgb(124, 104, 104);
-  border-bottom:1px solid rgb(124, 104, 104);
+  border-top:1px solid #006238;
+  border-bottom:1px solid #006238;
 }
 .Card-top-bar{
-  height:17%;
+  height:16%;
 }
 .nav-left,.likes{
   display: flex;
-  justify-items: center;
   align-items: center;
   flex-direction: row;
-  height: 70px;
-  padding: 30px;
+  float: left;
+  /* height: 70px; */
+  /* padding: 30px; */
   box-sizing: border-box;
+}
+.heart-css{
+  cursor: pointer;
+}
+.nav-left{
+  color: #006238;
+  width: 50%;
+  height: 100%;
+}
+.svg{
+  width:50%;
+  height: 100%;
+}
+.logo{
+  width: 15%;
+  /* background-color: #006238; */
+  height: 100%;
+}
+.logo-wrapper{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+  /* background-color: aqua; */
+  height: 50%;
 }
 .emoji-logo-container,.likes{
   height: 8%;
@@ -127,18 +168,28 @@
 .nav-right{
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   height: 70px;
   padding: 30px;
+  /* background-color: #006238; */
   box-sizing: border-box;
 
+}
+.nav-right > img{
+  width: 8%;
 }
 .logo,.nav-right{
   font-size: xx-large;
 }  
 .description{
-  height: 20%;
+  height: 15%;
 }
-
+.blur-text{
+  color: #707070;
+  padding: 0%;
+  margin: 0%;
+  text-align: left;
+}
 .Card-container,.top-left{
   display: flex;
   flex-direction: column;
@@ -154,7 +205,11 @@
 .text{
   padding: 0%;
   margin: 0%;
+  color:#000000;
   text-align: left;
+}
+.para{
+  font-weight: bolder;
 }
 .Card-container{
   width: 330px;
@@ -170,27 +225,47 @@
 }
 .heart-comment-container{
   height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .bottom-logo,.date{
   width: 50px;
   height: 100%;
+}
+.date{
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: small;
+}
+.heart{
+  height: 100%;
+  width:50% ;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.date{
-  width: 100px;
-  font-size: small;
+.heart-image{
+  width: 100%;
+  height: 100%;
 }
-.heart{
-  font-size: xx-large;
+.heart-wrapper{
+  width: 40%;
+  margin: 0px;
+  float: left;
+  height:60%;
 }
-.bottom-logo img{
-  height: 80%;
-  width: 40px;
-  transform: rotate(40deg);
+.bottom-logo{
+   height: 100%;
+  display: flex;
+  align-items: center;
+}
 
-}
+
 
 .series-dot-button-container{
   height: 100%;
@@ -203,7 +278,7 @@
   height: 6px;
   border-radius:50%;
   margin-right: 4px;
-  background-color: black;
+  background-color: #707070;
 }
 
 .image-container{

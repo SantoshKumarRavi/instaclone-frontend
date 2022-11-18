@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Card = ({personDetails:{name,location,likes,postImage,description,date}}) => {
     console.log("date",date)
+    const[serverlike,setServerlike]=useState(0)
+    function increaseLike(){
+        setServerlike((pre)=>pre+1)
+    }
   return (
     <div className='Card-container'>
     <div className='Card-top-bar'>
         <div className='top-left'>
-            <h4 className='text'>{name}</h4>
-            <p className='text'>{location}</p>
+            <h4 className='text helvetica-font'>{name.slice(0,1).toUpperCase()+name.slice(1)}</h4>
+            <p className='blur-text'>{location}</p>
         </div>
         <div className='top-right'>
             <div className='series-dot-button-container'>
@@ -22,16 +26,24 @@ const Card = ({personDetails:{name,location,likes,postImage,description,date}}) 
     </div>
     <div className='emoji-logo-container'>
         <div className='heart-comment-container'>
-            <div className='bottom-logo heart'>♡</div>
-            <div className='bottom-logo'><img alt="logo" src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/000000/external-rocket-project-planing-flatart-icons-outline-flatarticons-1.png"/></div>
+            <div className='heart heart-css' onClick={()=>increaseLike()} >
+                <div className='heart-wrapper'>
+                <img className='heart-image' alt="heart" src={require("../assets/logo/heart.png")}/>
+                </div>
+            </div>
+            <div className='bottom-logo'>
+                <div className='heart-wrapper'>
+                <img className='heart-image' alt="logo" src={require("../assets/logo/share.png")}/>
+                </div>
+            </div>
         </div>
         <div className='date'>{new Date(date).getDate()} {new Date(date).toDateString().slice(4,7)} {new Date(date).getFullYear()}</div>
     </div>
-    <div className='likes'>
-            <h5  className='text'> {likes===0?"Tap to like":`${likes} Likes`}</h5>
+    <div className='likes' >
+            <h5  className='blur-text'> {likes===0?((serverlike===0)?"Tap to like":serverlike):`${likes} Likes`}</h5>
     </div>
-    <div  className='likes description'>
-        <p className='text'>{description}</p>
+    <div className='likes description'>
+        <p className='text para helvetica-font'>{description}</p>
     </div>
     </div>
   )

@@ -5,6 +5,7 @@ const PostviewPage = () => {
   const[users,setusers]=useState([])
   const[emptydata,setEmptyDate]=useState(false)
   useEffect(()=>{
+    console.log("im fetching")
     fetch("https://instaclonebackendproject.herokuapp.com/posts")
     .then(res=>{
       return res.json()
@@ -15,8 +16,7 @@ const PostviewPage = () => {
           setusers(()=>[...data])
         }
     })
-
-  },[users])
+  },[])
 
   return (
     <div>
