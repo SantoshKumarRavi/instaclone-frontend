@@ -83,11 +83,11 @@ const PostForm = () => {
   return (
     <div>
       <Navbar />
+      {<div style={{visibility:uploading?"visible":"hidden"}} className="uploader-message">{uploading &&<h4 className="uploading-text">Uploading.................pls wait</h4>}</div>}
       <form className="form-container" onSubmit={postToServer}>
-        {uploading && <div>uploading................. pls wait</div>}
         <div className="inside-form">
           <div className="file-component-container">
-          <input className="dir-text" readOnly type="text" value={filename} />
+          <input className="dir-text" readOnly type="text" style={{color:(filename!=="")?"#000000":"#707070"}} value={filename===""?"No File Chosen":filename} />
           <div className="btn-browse">
             <label className="label" htmlFor="files">
               Browse
@@ -122,7 +122,7 @@ const PostForm = () => {
           name="Location"
         />
          </div>
-         <div>
+         <div className="desc-container">
          <input
           type="text"
           className="desc-input"
@@ -133,11 +133,8 @@ const PostForm = () => {
           name="Description"
         />
          </div>
-        
-      
-      
 
-        <button disabled={disabled}>Post</button>
+        <button className={`${!disabled?"btn-post":""}`} disabled={disabled}>Post</button>
         </div>
       </form>
     </div>
