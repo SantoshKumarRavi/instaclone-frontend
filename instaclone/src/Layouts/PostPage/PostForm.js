@@ -55,7 +55,7 @@ const PostForm = () => {
       }
     }
 
-    fetch("http://localhost:8081/posts", {
+    fetch("https://instaclonebackendproject.herokuapp.com/posts", {
       method: "POST",
       body: formData,
     })
@@ -77,6 +77,7 @@ const PostForm = () => {
         <input type="file" onChange={(e) => onChangeSetState(e)} name="files" />
         <input
           type="text"
+          autoComplete="off"
           value={name}
           onChange={(e) => onChangeSetState(e)}
           placeholder="Author"
@@ -85,12 +86,14 @@ const PostForm = () => {
         <input
           type="text"
           value={Location}
+          autoComplete="off"
           onChange={(e) => onChangeSetState(e)}
           placeholder="Location"
           name="Location"
         />
         <input
           type="text"
+          autoComplete="off"
           value={Description}
           onChange={(e) => onChangeSetState(e)}
           placeholder="Description"

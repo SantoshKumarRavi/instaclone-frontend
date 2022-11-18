@@ -28,7 +28,7 @@ const Card = ({personDetails:{name,location,likes,postImage,description,date}}) 
         <div className='date'>{new Date(date).getDate()} {new Date(date).toDateString().slice(4,7)} {new Date(date).getFullYear()}</div>
     </div>
     <div className='likes'>
-            <h5  className='text'>{likes} Likes</h5>
+            <h5  className='text'> {likes===0?"Tap to like":`${likes} Likes`}</h5>
     </div>
     <div  className='likes description'>
         <p className='text'>{description}</p>
