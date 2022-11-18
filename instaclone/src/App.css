@@ -117,8 +117,16 @@
   height: 100%;
 }
 .nav-bar{
+  position:fixed;
+  top: 0;
+  left: 0;
+  background-color:#FFFFFF;
+  width: 100%;
   border-top:1px solid #006238;
   border-bottom:1px solid #006238;
+}
+.nav-position{
+  position: relative;
 }
 .Card-top-bar{
   height:16%;
@@ -291,11 +299,64 @@
   width: 100%;
   height: 100%;
 }
+.form-container{
+  width: 500px;
+  margin:120px auto;
+  height: 200px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hidden-file{
+   z-index: -15;
+   color: white;
+   background-color: white;
+   visibility:hidden;
+   display: none;
+  }
+.btn-browse{
+  width:30%;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.label{
+  display: block;
+  width: 100%;
+  cursor: pointer;
 
+}
+.btn-browse >.hidden-file{
+  width: 100%;
+}
+.inside-form{
+  width: 80%;
+  height: 80%;
+}
 
+.desc-input{
+  width: 100%;
+  box-sizing: border-box;
+}
 
-
-
+.file-component-container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.dir-text{
+  width: 70%;
+}
+.space-between-container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.space-between-children{
+  width: 30%;
+}
 
 
 .App-logo {

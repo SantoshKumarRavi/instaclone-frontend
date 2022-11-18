@@ -4,6 +4,7 @@ import { ReactComponent as BrandIcon } from "../assets/logo/icon.svg";
 
 const Navbar = () => {
   return (
+    <div className='nav-position'>
     <div className='nav-bar'>
       <div className='wraping-nav'>
 
@@ -17,6 +18,7 @@ const Navbar = () => {
         </div>
         <Link className='link-container nav-right' to="/PostForm"><img alt="postImage" src={require("../assets/logo/camera.png")}/></Link>
       </div>
+    </div>
     </div>
   )
 }

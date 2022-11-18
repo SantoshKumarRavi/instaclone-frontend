@@ -21,6 +21,8 @@ const PostviewPage = () => {
   return (
     <div>
     <Navbar/>
+    <br/>
+    <br/>
     {users?.map((personDetails,index)=>{
      return <Card key={index} personDetails={personDetails}/>
     })

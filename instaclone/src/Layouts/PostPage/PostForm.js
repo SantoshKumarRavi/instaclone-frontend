@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState, useEffect, useRef } from "react";
+import { Navbar } from "../../components";
 const PostForm = () => {
+  const dirRef = useRef(null);
   const [state, setState] = useState({
     name: "",
     Location: "",
@@ -14,7 +15,8 @@ const PostForm = () => {
     files: null,
   };
   const [disabled, setDisabled] = useState(true);
-  const[uploading,setUploading]=useState(false)
+  const [uploading, setUploading] = useState(false);
+  const [filename, setFilename] = useState("");
   function onChangeSetState(e) {
     if (e.target.name !== "files") {
       let updated = { ...state };
@@ -24,6 +26,8 @@ const PostForm = () => {
     if (e.target.name === "files") {
       let updated = { ...state };
       updated[e.target.name] = e.target.files;
+      let dirName = dirRef.current.value;
+      setFilename(() => dirName);
       setState(updated);
     }
   }
@@ -42,15 +46,20 @@ const PostForm = () => {
       setDisabled(() => false);
     }
   }, [state]);
-
+  // console.log("path",window)
   function postToServer(e) {
-    setUploading(true)
+    setUploading(true);
     e.preventDefault();
     const formData = new FormData();
     formData.append("images", state.files[0]);
 
     for (let i of Object.keys(state)) {
       if (i !== "files") {
+        if (state[i] === "") {
+          console.log(state[i], "checking");
+          setUploading(() => false);
+          return;
+        }
         formData.append(i, state[i]);
       }
     }
@@ -60,46 +69,76 @@ const PostForm = () => {
       body: formData,
     })
       .then((response) => {
-        setUploading(false)
+        setUploading(false);
         return response.json();
       })
       .then(() => {
         // console.log("data in front end", data);
         setState(initialState);
+        setFilename("");
         window.location.href = "/Postview";
       });
   }
   const { name, Location, Description } = state;
   return (
-    <div className="">
-    {uploading && <div>uploading................. pls wait</div>}
-      <form onSubmit={postToServer}>
-        <input type="file" onChange={(e) => onChangeSetState(e)} name="files" />
-        <input
+    <div>
+      <Navbar />
+      <form className="form-container" onSubmit={postToServer}>
+        {uploading && <div>uploading................. pls wait</div>}
+        <div className="inside-form">
+          <div className="file-component-container">
+          <input className="dir-text" readOnly type="text" value={filename} />
+          <div className="btn-browse">
+            <label className="label" htmlFor="files">
+              Browse
+            </label>
+          </div>
+          </div>
+          <input
+            ref={dirRef}
+            id="files"
+            type="file"
+            className="hidden-file"
+            onChange={(e) => onChangeSetState(e)}
+            name="files"
+          />
+         <div className="space-between-container">
+         <input
           type="text"
           autoComplete="off"
+          className="space-between-children"
           value={name}
           onChange={(e) => onChangeSetState(e)}
           placeholder="Author"
           name="name"
         />
-        <input
+          <input
           type="text"
+          className="space-between-children"
           value={Location}
           autoComplete="off"
           onChange={(e) => onChangeSetState(e)}
           placeholder="Location"
           name="Location"
         />
-        <input
+         </div>
+         <div>
+         <input
           type="text"
+          className="desc-input"
           autoComplete="off"
           value={Description}
           onChange={(e) => onChangeSetState(e)}
           placeholder="Description"
           name="Description"
         />
+         </div>
+        
+      
+      
+
         <button disabled={disabled}>Post</button>
+        </div>
       </form>
     </div>
   );
