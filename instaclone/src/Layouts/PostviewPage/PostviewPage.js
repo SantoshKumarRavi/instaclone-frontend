@@ -27,6 +27,7 @@ const PostviewPage = () => {
      return <Card key={index} personDetails={personDetails}/>
     })
     }
+    <br/>
     {emptydata && <p>No post...Try to upload images by clicking top right icon 📷</p>}
     </div>
   )
