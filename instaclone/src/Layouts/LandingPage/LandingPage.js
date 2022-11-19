@@ -11,7 +11,7 @@ const LandingPage = () => {
         </div>
         <div className='right-container'>
             <div className='brand-name child'>
-                Welcome to 10x
+                10x Team 04
             </div>
             <div className='child'>
                 <Link className='link-container' to="/Postview"><button className='btn-container'>Enter</button></Link>
