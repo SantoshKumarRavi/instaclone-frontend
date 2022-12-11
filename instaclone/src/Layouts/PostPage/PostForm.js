@@ -64,7 +64,7 @@ const PostForm = () => {
       }
     }
 
-    fetch("https://instaclonebackendproject.herokuapp.com/posts", {
+    fetch("https://instabackend-a9cu.onrender.com/posts", {
       method: "POST",
       body: formData,
     })

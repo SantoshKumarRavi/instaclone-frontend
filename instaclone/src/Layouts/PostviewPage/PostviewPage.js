@@ -6,7 +6,7 @@ const PostviewPage = () => {
   const[emptydata,setEmptyDate]=useState(false)
   useEffect(()=>{
     console.log("im fetching")
-    fetch("https://instaclonebackendproject.herokuapp.com/posts")
+    fetch("https://instabackend-a9cu.onrender.com/posts")
     .then(res=>{
       return res.json()
     }).then((data)=>{
