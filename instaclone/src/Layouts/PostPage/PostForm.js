@@ -76,7 +76,7 @@ const PostForm = () => {
         // console.log("data in front end", data);
         setState(initialState);
         setFilename("");
-        window.location.href = "/Postview";
+        window.location.href = "https://instacloneproject.netlify.app/Postview";
       });
   }
   const { name, Location, Description } = state;
